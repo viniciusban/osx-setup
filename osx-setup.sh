@@ -96,7 +96,7 @@ git clone git@github.com:google/yapf.git ~/projects/yapf
 # ---------------
 
 brew install sqlite3
-# brew cask install https://raw.githubusercontent.com/viniciusban/brew-casks/master/casks/sqlitestudio.rb
+brew cask install sqlitestudio
 
 
 # The Editor!

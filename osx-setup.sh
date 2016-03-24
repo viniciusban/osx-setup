@@ -103,7 +103,7 @@ brew install sqlite3
 # -----------
 
 brew install vim
-brew install macvim
+brew install macvim --with-python3
 brew linkapps macvim
 
 

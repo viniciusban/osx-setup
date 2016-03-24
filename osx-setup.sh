@@ -162,29 +162,24 @@ deactivate
 # Macvim keyboard
 # ---------------
 
-# brew cask install karabiner # keyboard remapping tool
-#
-# # config to Karabiner remap Right Command Key to Control in macvim
-# cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
-# <?xml version="1.0"?>
-# <root>
-#     <appdef>
-#         <appname>MacVim</appname>
-#         <equal>org.vim.MacVim</equal>
-#     </appdef>
-#
-#     <item>
-#         <name>MacVim: Right Command key emulates CONTROL</name>
-#         <identifier>private.right_command_to_control_l_in_macvim</identifier>
-#         <only>
-#             MacVim
-#         </only>
-#         <autogen>
-#             __KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_L
-#         </autogen>
-#     </item>
-# </root>
-# EOD
+brew cask install karabiner  # keyboard remapping tool
+cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
+<?xml version="1.0"?>
+<root>
+
+    <item>
+        <name>MacVim and Terminal: Right Command key emulates CONTROL</name>
+        <identifier>private.right_command_to_control_l_in_macvim_and_terminal</identifier>
+        <only>
+            VI,TERMINAL
+        </only>
+        <autogen>
+            __KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_L
+        </autogen>
+    </item>
+
+</root>
+EOD
 
 
 # Meslo font

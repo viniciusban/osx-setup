@@ -141,6 +141,8 @@ brew cask install libreoffice
 # --------
 
 brew cask install qlmarkdown  # Quick look markdown files in Finder
+# Allow copy text from preview window
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 
 # reStructuredText

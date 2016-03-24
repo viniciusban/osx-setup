@@ -141,7 +141,6 @@ brew cask install libreoffice
 # --------
 
 brew cask install qlmarkdown  # Quick look markdown files in Finder
-# brew cask install mou  # markdown editor
 
 
 # reStructuredText

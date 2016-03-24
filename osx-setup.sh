@@ -128,10 +128,10 @@ brew linkapps macvim
 brew cask install transmission
 brew cask install firefox
 brew cask install dropbox
+brew cask install libreoffice
 # brew cask install filezilla
 # brew cask install skype
 # brew cask install alinof-timer
-# brew cask install libreoffice
 # brew cask install flycut  # clipboard manager
 # brew cask install the-unarchiver # extract many compressed files
 # brew install cookiecutter

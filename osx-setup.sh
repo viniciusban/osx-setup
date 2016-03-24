@@ -129,6 +129,7 @@ brew cask install transmission
 brew cask install firefox
 brew cask install dropbox
 brew cask install libreoffice
+brew cask install dash
 # brew cask install filezilla
 # brew cask install skype
 # brew cask install alinof-timer

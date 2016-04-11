@@ -102,7 +102,7 @@ brew cask install sqlitestudio
 # The Editor!
 # -----------
 
-brew install vim
+brew install vim --with-python3
 brew install macvim --with-python3
 brew linkapps macvim
 

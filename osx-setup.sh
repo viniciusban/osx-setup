@@ -163,6 +163,8 @@ deactivate
 # Macvim keyboard
 # ---------------
 
+brew cask install keycastr  # show pressed key in a HUD.
+
 brew cask install karabiner  # keyboard remapping tool
 cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
 <?xml version="1.0"?>

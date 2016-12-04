@@ -194,6 +194,15 @@ cd meslo/dist/v1.2.1
 unzip Meslo\ LG\ v1.2.1.zip
 cp -r Meslo\ LG\ v1.2.1 ~/Library/Fonts/Meslo
 
+# Source Code Pro font
+# --------------------
+
+cd ${TMPDIR}
+wget -O source-code-pro.zip https://www.fontsquirrel.com/fonts/download/source-code-pro
+unzip source-code-pro.zip
+mkdir -p ~/Library/Fonts/SourceCodePro
+mv SourceCodePro*  ~/Library/Fonts/SourceCodePro/
+
 
 # Now you must install manually from AppStore:
 # - Marko  # markdown preview

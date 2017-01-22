@@ -54,6 +54,7 @@ mkdir -p ~/virtualenvs
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 brew install caskroom/cask/brew-cask
+brew tap homebrew/dupes  # to install screen with 256 colors support
 
 
 # Let's make them work...
@@ -98,6 +99,7 @@ git clone git@github.com:google/yapf.git ~/projects/yapf
 # ----------------------
 
 brew install tmux
+brew install screen
 # brew cask install iterm2
 
 

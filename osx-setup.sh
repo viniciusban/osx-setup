@@ -97,7 +97,7 @@ git clone git@github.com:google/yapf.git ~/projects/yapf
 # The power of terminal!
 # ----------------------
 
-# brew install tmux
+brew install tmux
 # brew cask install iterm2
 
 

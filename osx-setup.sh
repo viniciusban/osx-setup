@@ -196,6 +196,31 @@ cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
 EOD
 
 
+# Remove ssh keys from ssh-agent every 15 min.
+# --------------------------------------------
+
+mkdir -p ~/Library/LauchAgents
+cd !$
+cat >com.viniciusban.ssh-agent-remove-key.plist <<EOD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ -->
+<dict>
+	<key>Label</key>
+	<string>com.viniciusban.ssh-agent-remove-key</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/ssh-add</string>
+		<string>-d</string>
+	</array>
+    <key>StartInterval</key>
+    <integer>900</integer> <!-- seconds -->
+</dict>
+</plist>
+EOD
+
+
 # Meslo font
 # ----------
 

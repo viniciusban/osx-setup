@@ -102,6 +102,9 @@ brew install tmux
 brew install screen
 # brew cask install iterm2
 
+# fix MacOS allowing softwares under tmux to interact with system clipboard
+brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
+
 
 # Sqlite3 related
 # ---------------

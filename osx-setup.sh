@@ -148,7 +148,7 @@ brew cask install dash
 # brew cask install skype
 # brew cask install alinof-timer
 # brew cask install flycut  # clipboard manager
-# brew cask install the-unarchiver # extract many compressed files
+brew cask install the-unarchiver # extract many compressed files
 # brew install cookiecutter
 
 

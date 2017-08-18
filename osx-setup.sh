@@ -199,8 +199,30 @@ cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
 EOD
 
 
-# Remove ssh keys from ssh-agent every 15 min.
-# --------------------------------------------
+# Cache ssh key password for only 15 min.
+# ---------------------------------------
+
+# Actually, remove ssh keys from ssh-agent every 15 min.
+#
+# 1. I don't want it to be stored in keychain. Keychain stores you
+# passphrase forever. It doesn't ask you it anymore. I don't want it.
+#
+# Note: it seemd MacOS Sierra fixes it.
+#
+# 2. I want it to have a cache lifetime (15 min.)
+#
+# I followed instructions from Apple
+# (https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
+# and created
+# ``~/Library/LaunchAgents/com.viniciusban.ssh-agent-remove-key.plist`` to
+# run each 15 minutes as a user agent.
+#
+# For more details see:
+# - $ man ssh-add -d
+# - http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/
+#
+# So, I let ssh-agent cache my passphrase and remote it each 15 min. ;-)
+
 
 mkdir -p ~/Library/LauchAgents
 cd !$

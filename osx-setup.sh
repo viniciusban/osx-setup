@@ -67,6 +67,7 @@ brew tap homebrew/dupes  # to install screen with 256 colors support
 brew install wget
 brew install tree
 brew install git
+brew install ag ack
 
 
 # libxml

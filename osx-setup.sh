@@ -139,7 +139,7 @@ brew cask install firefox
 brew cask install dropbox
 brew cask install libreoffice
 brew cask install dash
-# brew cask install filezilla
+brew cask install filezilla
 brew cask install the-unarchiver # extract many compressed files
 
 

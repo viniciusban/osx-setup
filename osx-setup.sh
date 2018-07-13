@@ -82,10 +82,7 @@ brew link libxslt --force
 # Python
 # ------
 
-brew install python
 brew install python3
-
-pip install virtualenv  # for Python 2 only.
 
 
 # Pep8 related

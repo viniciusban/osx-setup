@@ -151,20 +151,6 @@ brew cask install qlmarkdown  # Quick look markdown files in Finder
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 
-# reStructuredText
-# ----------------
-
-# Online reStructuredText editor and preview
-git clone https://github.com/anru/rsted.git ~/projects/rsted
-cd ~/projects/rsted
-virtualenv ~/virtualenvs/rsted
-source ~/virtualenvs/rsted/bin/activate
-pip install -U pip setuptools
-pip install -r pip-requirements.txt
-deactivate
-
-
-
 # Keyboard
 # --------
 

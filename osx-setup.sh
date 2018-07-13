@@ -174,29 +174,11 @@ deactivate
 
 
 
-# Macvim keyboard
-# ---------------
+# Keyboard
+# --------
 
 brew cask install keycastr  # show pressed key in a HUD.
-
-brew cask install karabiner  # keyboard remapping tool
-cat >~/Library/Application\ Support/Karabiner/private.xml <<EOD
-<?xml version="1.0"?>
-<root>
-
-    <item>
-        <name>MacVim and Terminal: Right Command key emulates CONTROL</name>
-        <identifier>private.right_command_to_control_l_in_macvim_and_terminal</identifier>
-        <only>
-            VI,TERMINAL
-        </only>
-        <autogen>
-            __KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_L
-        </autogen>
-    </item>
-
-</root>
-EOD
+brew cask install karabiner-elements  # keyboard remapping tool
 
 
 # Cache ssh key password for only 15 min.

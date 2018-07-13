@@ -181,29 +181,28 @@ brew cask install keycastr  # show pressed key in a HUD.
 brew cask install karabiner-elements  # keyboard remapping tool
 
 
-# Cache ssh key password for only 15 min.
-# ---------------------------------------
+# Cache ssh key password for an hour
+# ----------------------------------
 
-# Actually, remove ssh keys from ssh-agent every 15 min.
+# Actually, remove ssh keys from ssh-agent every hour.
 #
-# 1. I don't want it to be stored in keychain. Keychain stores you
+# 1. I don't want it to be stored in keychain. Keychain stores your
 # passphrase forever. It doesn't ask you it anymore. I don't want it.
 #
-# Note: it seemd MacOS Sierra fixes it.
+# Note: it seemd MacOS Sierra fixes it. But I don't tested.
 #
-# 2. I want it to have a cache lifetime (15 min.)
+# 2. I want it to have a cache lifetime (e.g., 1 hour).
 #
-# I followed instructions from Apple
-# (https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
+# I followed [instructions from Apple](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
 # and created
-# ``~/Library/LaunchAgents/com.viniciusban.ssh-agent-remove-key.plist`` to
-# run each 15 minutes as a user agent.
+# `~/Library/LaunchAgents/com.viniciusban.ssh-agent-remove-key.plist` to
+# run each 3600 seconds (1 hour) as a user agent.
 #
 # For more details see:
 # - $ man ssh-add -d
 # - http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/
 #
-# So, I let ssh-agent cache my passphrase and remote it each 15 min. ;-)
+# So, I ssh-agent caches my passphrase and this process removes it each hour.
 
 
 mkdir -p ~/Library/LauchAgents
@@ -222,7 +221,7 @@ cat >com.viniciusban.ssh-agent-remove-key.plist <<EOD
 		<string>-d</string>
 	</array>
     <key>StartInterval</key>
-    <integer>900</integer> <!-- seconds -->
+    <integer>3600</integer> <!-- seconds -->
 </dict>
 </plist>
 EOD

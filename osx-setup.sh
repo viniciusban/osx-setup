@@ -88,8 +88,6 @@ brew install python3
 # Pep8 related
 # ------------
 
-# sudo pip install pep8
-# sudo pip install autopep8
 git clone git@github.com:google/yapf.git ~/projects/yapf
 
 
@@ -142,11 +140,7 @@ brew cask install dropbox
 brew cask install libreoffice
 brew cask install dash
 # brew cask install filezilla
-# brew cask install skype
-# brew cask install alinof-timer
-# brew cask install flycut  # clipboard manager
 brew cask install the-unarchiver # extract many compressed files
-# brew install cookiecutter
 
 
 # Markdown

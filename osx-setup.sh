@@ -204,6 +204,11 @@ cat >com.viniciusban.ssh-agent-remove-key.plist <<EOD
 EOD
 
 
+# Save battery life spinning down hard disks after 5 min of inactivity.
+# I don't know why, but my default was 0 (don't spin down).
+sudo pmset -b disksleep 5
+
+
 # Now you must install manually from AppStore:
 # - Marko  # markdown preview
 # - Telegram  # the OS X client

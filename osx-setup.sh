@@ -155,6 +155,7 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 # --------
 
 brew cask install keycastr  # show pressed key in a HUD.
+brew cask install captin  # show capslock status in menu bar.
 brew cask install karabiner-elements  # keyboard remapping tool
 
 

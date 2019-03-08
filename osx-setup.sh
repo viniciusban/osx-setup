@@ -141,6 +141,7 @@ brew cask install libreoffice
 brew cask install dash
 brew cask install filezilla
 brew cask install the-unarchiver # extract many compressed files
+brew install ctags # exuberant-ctags on Mac, to use with vim.
 
 
 # Markdown

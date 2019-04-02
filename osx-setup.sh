@@ -113,7 +113,7 @@ brew cask install sqlitestudio
 
 brew install vim
 brew install macvim
-brew linkapps macvim
+brew link macvim
 
 
 # Virtualisation
